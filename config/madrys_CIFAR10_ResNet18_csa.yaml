@@ -1,0 +1,35 @@
+model: ResNet18
+dataset: CIFAR10
+data_path: ~/data/
+
+train:
+  batchsize: 128
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 0.0002
+  log_period: 100
+
+  mask_freq: False
+  mask_alpha: 0.5
+  conf_path: 'path to ifft files'
+  class_conf_size: 1
+  conf_no_att: True
+  conf_loss_alpha: 1.
+  other_class_conf: False
+
+dataloader:
+  num_workers: 4
+  pin_memory: True
+
+scheduler:
+  epochs: 100
+  lr_decay: 0.1
+  milestones: [75, 90]
+
+adv:
+  train_step_size: 2
+  train_epsilon: 8
+  train_num_steps: 10
+  test_step_size: 2
+  test_epsilon: 8
+  test_num_steps: 20

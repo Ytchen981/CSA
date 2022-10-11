@@ -1,0 +1,11 @@
+model: ResNet18
+dataset: cifar10
+data_path: ~/data
+
+shapley:
+  model_path: "path to checkpoint"
+  sample_times: 2000
+  num_per_class: 150
+  testdata: False
+  mask_size: 16
+  n_per_batch: 1
