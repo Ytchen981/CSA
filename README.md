@@ -19,7 +19,7 @@ The checkpoint of the trained model will be saved in ```./output/$date_of_the_ti
 
 Change the ```shapley.model_path``` in ```config/Shapley.yaml``` to the path of checkpoint at the last epoch and sample the Shapley value via.
 
-```python Shapley.py --config config/Shapley.yaml```
+```python Shapley_softmax.py --config config/Shapley.yaml```
 
 The results would be saved in ```./output/$date_of_the_time/Shapley.yaml/shap_result```
 
